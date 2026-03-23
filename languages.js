@@ -5,6 +5,8 @@
 function applyLanguage() {
   const lang = localStorage.getItem("lang") || "en";
   const elements = document.querySelectorAll("[data-key]");
+// Update <html lang="">
+document.getElementById("htmlTag").setAttribute("lang", lang);
 
   // Apply translations
   elements.forEach(el => {
