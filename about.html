@@ -3,69 +3,114 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About HelvetiaRide – Premium Chauffeur Service in Zurich</title>
+<title data-key="about_title">About HelvetiaRide</title>
 <meta name="description" content="Learn more about HelvetiaRide, our mission, values, and commitment to premium chauffeur and airport transfer services in Switzerland.">
 <link rel="stylesheet" href="style.css">
+
+<script src="languages.js"></script>
+
 <script>
-function toggleMode() { document.body.classList.toggle("light"); }
+function toggleMode() {
+  document.body.classList.toggle("light");
+}
 </script>
 </head>
+
 <body>
 
 <header>
   <div class="logo">HelvetiaRide</div>
+
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="fleet.html">Fleet</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html" data-key="nav_home">Home</a>
+    <a href="about.html" data-key="nav_about">About</a>
+    <a href="services.html" data-key="nav_services">Services</a>
+    <a href="fleet.html" data-key="nav_fleet">Fleet</a>
+    <a href="pricing.html" data-key="nav_pricing">Pricing</a>
+    <a href="contact.html" data-key="nav_contact">Contact</a>
+
+    <!-- Language Switcher -->
+    <select id="langSwitcher" onchange="setLanguage(this.value)">
+      <option value="en">EN</option>
+      <option value="de">DE</option>
+      <option value="fr">FR</option>
+      <option value="it">IT</option>
+      <option value="es">ES</option>
+      <option value="pt">PT</option>
+      <option value="ru">RU</option>
+      <option value="tr">TR</option>
+      <option value="ar">AR</option>
+      <option value="fa">FA</option>
+      <option value="zh">ZH</option>
+      <option value="ja">JA</option>
+    </select>
+
     <span class="toggle" onclick="toggleMode()">Light / Dark</span>
   </nav>
 </header>
 
 <main class="main">
 
+<!-- HERO -->
 <section class="hero hero-inner">
   <div class="hero-content">
-    <h1>About HelvetiaRide</h1>
-    <p>Premium chauffeur and airport transfer service based in Zurich, serving clients across Switzerland.</p>
+    <h1 data-key="about_title">About HelvetiaRide</h1>
+    <p data-key="about_sub">Premium chauffeur and airport transfer service based in Zurich.</p>
   </div>
 </section>
 
+<!-- WHO WE ARE -->
 <section class="section">
-  <h2>Who We Are</h2>
-  <p>HelvetiaRide was created to bring a new standard of comfort, reliability, and professionalism to airport transfers and chauffeur services in Switzerland. Based in Zurich, we focus on delivering a seamless experience for business travelers, tourists, and local clients who expect more than just a ride.</p>
+  <h2 data-key="about_who_title">Who We Are</h2>
+  <p data-key="about_who_text">
+    HelvetiaRide was created to bring a new standard of comfort, reliability, and professionalism to airport transfers and chauffeur services in Switzerland. Based in Zurich, we focus on delivering a seamless experience for business travelers, tourists, and local clients who expect more than just a ride.
+  </p>
 </section>
 
+<!-- OUR MISSION -->
 <section class="section">
-  <h2>Our Mission</h2>
-  <p>Our mission is simple: to provide safe, on‑time, and luxurious transportation with a personal touch. From Zurich Airport transfers to long‑distance rides across Switzerland, we ensure every journey feels effortless, comfortable, and premium.</p>
+  <h2 data-key="about_mission_title">Our Mission</h2>
+  <p data-key="about_mission_text">
+    Our mission is simple: to provide safe, on‑time, and luxurious transportation with a personal touch. From Zurich Airport transfers to long‑distance rides across Switzerland, we ensure every journey feels effortless, comfortable, and premium.
+  </p>
 </section>
 
+<!-- OUR STANDARDS -->
 <section class="section">
-  <h2>Our Standards</h2>
+  <h2 data-key="about_standards_title">Our Standards</h2>
+
   <div class="grid-3">
+
     <div class="card">
-      <h3>Professional Drivers</h3>
-      <p>Experienced, discreet, and well‑trained chauffeurs who understand the needs of business and VIP clients.</p>
+      <h3 data-key="about_standard1_title">Professional Drivers</h3>
+      <p data-key="about_standard1_text">
+        Experienced, discreet, and well‑trained chauffeurs who understand the needs of business and VIP clients.
+      </p>
     </div>
+
     <div class="card">
-      <h3>Luxury Vehicles</h3>
-      <p>Modern Mercedes‑Benz vehicles, maintained to the highest standards of safety and comfort.</p>
+      <h3 data-key="about_standard2_title">Luxury Vehicles</h3>
+      <p data-key="about_standard2_text">
+        Modern Mercedes‑Benz vehicles, maintained to the highest standards of safety and comfort.
+      </p>
     </div>
+
     <div class="card">
-      <h3>Swiss Reliability</h3>
-      <p>On‑time pickups, clear communication, and a service you can trust for every journey.</p>
+      <h3 data-key="about_standard3_title">Swiss Reliability</h3>
+      <p data-key="about_standard3_text">
+        On‑time pickups, clear communication, and a service you can trust for every journey.
+      </p>
     </div>
+
   </div>
 </section>
 
 </main>
 
 <footer>
-  © 2026 HelvetiaRide — Call/WhatsApp: +41 76 680 38 05 — Email: info@helvetiaride.com
+  © 2026 HelvetiaRide —  
+  Call/WhatsApp: +41 76 680 38 05 —  
+  Email: info@helvetiaride.com
 </footer>
 
 </body>
