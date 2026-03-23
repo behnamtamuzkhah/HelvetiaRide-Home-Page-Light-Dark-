@@ -3,370 +3,54 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HelvetiaRide – Premium Chauffeur Service</title>
-
-<style>
-
-/* --------------------------------------------------
-   GLOBAL STYLES
--------------------------------------------------- */
-
-:root {
-  --gold: #d4af37;
-  --black: #000;
-  --dark: #0d0d0d;
-  --dark2: #1a1a1a;
-  --light: #ffffff;
-  --glass-dark: rgba(20,20,20,0.55);
-  --glass-light: rgba(255,255,255,0.45);
-  --blur: blur(18px);
-  --radius: 14px;
-  --transition: 0.25s ease;
-  --font: "SF Pro Display", -apple-system, BlinkMacSystemFont, sans-serif;
-}
-
-body {
-  margin: 0;
-  font-family: var(--font);
-  background: var(--dark);
-  color: var(--light);
-  transition: var(--transition);
-}
-
-/* Light Mode */
-body.light {
-  background: #f5f5f5;
-  color: #111;
-}
-
-/* --------------------------------------------------
-   HEADER
--------------------------------------------------- */
-
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 18px 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  backdrop-filter: blur(14px);
-  background: rgba(0,0,0,0.35);
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-  z-index: 1000;
-}
-
-body.light header {
-  background: rgba(255,255,255,0.55);
-  border-bottom: 1px solid rgba(0,0,0,0.08);
-}
-
-.logo {
-  font-size: 22px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  color: var(--gold);
-}
-
-/* Light/Dark Toggle */
-.toggle {
-  cursor: pointer;
-  padding: 8px 16px;
-  border: 1px solid var(--gold);
-  border-radius: 20px;
-  color: var(--gold);
-  font-size: 14px;
-  transition: var(--transition);
-}
-
-/* --------------------------------------------------
-   HERO SECTION
--------------------------------------------------- */
-
-.hero {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  padding: 0 40px;
-  background-size: cover;
-  background-position: center;
-  background-image: url('https://images.unsplash.com/photo-1617788138017-80e472b72593?auto=format&fit=crop&w=1600&q=80');
-  position: relative;
-}
-
-.hero::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  backdrop-filter: blur(12px);
-  background: rgba(0,0,0,0.55);
-}
-
-.hero-content {
-  position: relative;
-  max-width: 520px;
-  z-index: 2;
-}
-
-.hero h1 {
-  font-size: 48px;
-  margin-bottom: 12px;
-  font-weight: 700;
-}
-
-.hero p {
-  font-size: 18px;
-  opacity: 0.85;
-  margin-bottom: 28px;
-}
-
-.cta-btn {
-  padding: 14px 28px;
-  background: black;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.cta-btn:hover {
-  background: var(--gold);
-  color: black;
-}
-
-/* --------------------------------------------------
-   BOOKING FORM
--------------------------------------------------- */
-
-.form-container {
-  max-width: 1100px;
-  margin: -80px auto 60px;
-  padding: 40px;
-  border-radius: var(--radius);
-  backdrop-filter: var(--blur);
-  background: var(--glass-dark);
-  border: 1px solid rgba(255,255,255,0.12);
-}
-
-body.light .form-container {
-  background: var(--glass-light);
-  border: 1px solid rgba(0,0,0,0.12);
-}
-
-.form-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
-}
-
-@media (max-width: 768px) {
-  .form-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-label {
-  font-size: 14px;
-  opacity: 0.85;
-}
-
-input, select, textarea {
-  width: 100%;
-  padding: 14px;
-  margin-top: 6px;
-  border-radius: var(--radius);
-  border: 1px solid rgba(255,255,255,0.15);
-  background: rgba(0,0,0,0.35);
-  color: white;
-  font-size: 15px;
-}
-
-body.light input,
-body.light select,
-body.light textarea {
-  background: rgba(255,255,255,0.65);
-  color: black;
-  border: 1px solid rgba(0,0,0,0.15);
-}
-
-.calculate-btn {
-  margin-top: 20px;
-  width: 100%;
-  padding: 16px;
-  background: black;
-  border: 1px solid var(--gold);
-  color: var(--gold);
-  border-radius: 10px;
-  font-size: 18px;
-  cursor: pointer;
-  transition: var(--transition);
-}
-
-.calculate-btn:hover {
-  background: var(--gold);
-  color: black;
-}
-
-/* --------------------------------------------------
-   FLEET CARDS
--------------------------------------------------- */
-
-.fleet-section {
-  max-width: 1200px;
-  margin: 80px auto;
-  padding: 0 40px;
-}
-
-.fleet-title {
-  font-size: 32px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.fleet-grid {
-  display: grid;
-  gap: 30px;
-}
-
-@media (min-width: 900px) {
-  .fleet-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.card {
-  display: flex;
-  backdrop-filter: var(--blur);
-  background: var(--glass-dark);
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: var(--radius);
-  overflow: hidden;
-  transition: var(--transition);
-}
-
-body.light .card {
-  background: var(--glass-light);
-  border: 1px solid rgba(0,0,0,0.12);
-}
-
-.card:hover {
-  transform: translateY(-4px);
-}
-
-.card img {
-  width: 50%;
-  object-fit: cover;
-}
-
-.card-content {
-  padding: 24px;
-  width: 50%;
-}
-
-.card-content h3 {
-  margin-top: 0;
-  font-size: 24px;
-}
-
-.card-content p {
-  opacity: 0.85;
-  margin-bottom: 12px;
-}
-
-/* Mobile: vertical cards */
-@media (max-width: 768px) {
-  .card {
-    flex-direction: column;
-  }
-  .card img {
-    width: 100%;
-  }
-  .card-content {
-    width: 100%;
-  }
-}
-
-/* --------------------------------------------------
-   WHY US
--------------------------------------------------- */
-
-.why {
-  max-width: 1100px;
-  margin: 80px auto;
-  padding: 0 40px;
-  text-align: center;
-}
-
-.why h2 {
-  font-size: 32px;
-  margin-bottom: 20px;
-}
-
-.why p {
-  max-width: 700px;
-  margin: 0 auto;
-  opacity: 0.85;
-}
-
-/* --------------------------------------------------
-   FOOTER
--------------------------------------------------- */
-
-footer {
-  margin-top: 80px;
-  padding: 40px;
-  text-align: center;
-  opacity: 0.6;
-  font-size: 14px;
-}
-
-</style>
-
+<title>HelvetiaRide – Zurich Airport Transfers & Chauffeur Service</title>
+<meta name="description" content="Premium Zurich airport transfers and chauffeur service across Switzerland with luxury vehicles and professional drivers.">
+<link rel="stylesheet" href="style.css">
 <script>
 function toggleMode() {
   document.body.classList.toggle("light");
 }
 </script>
-
 </head>
 <body>
 
 <header>
   <div class="logo">HelvetiaRide</div>
-  <div class="toggle" onclick="toggleMode()">Light / Dark</div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="fleet.html">Fleet</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="contact.html">Contact</a>
+    <span class="toggle" onclick="toggleMode()">Light / Dark</span>
+  </nav>
 </header>
 
-<!-- HERO -->
+<main class="main">
+
 <section class="hero">
   <div class="hero-content">
     <h1>Zurich Airport Transfers & Chauffeur Service</h1>
     <p>Private rides across Switzerland with premium vehicles and professional chauffeurs.</p>
-    <button class="cta-btn">Book Now</button>
+    <button class="btn-primary" onclick="location.href='pricing.html'">View Pricing</button>
   </div>
 </section>
 
-<!-- BOOKING FORM -->
 <div class="form-container">
   <div class="form-grid">
-
     <div>
       <label>Pickup Location</label>
       <input type="text" placeholder="Enter pickup address">
     </div>
-
     <div>
       <label>Dropoff Location</label>
       <input type="text" placeholder="Enter dropoff address">
     </div>
-
     <div>
       <label>Date & Time</label>
       <input type="datetime-local">
     </div>
-
     <div>
       <label>Passengers</label>
       <select>
@@ -377,7 +61,6 @@ function toggleMode() {
         <option>5+ Passengers</option>
       </select>
     </div>
-
     <div>
       <label>Class</label>
       <select>
@@ -386,7 +69,6 @@ function toggleMode() {
         <option>First Class</option>
       </select>
     </div>
-
     <div>
       <label>Bags</label>
       <select>
@@ -397,7 +79,6 @@ function toggleMode() {
         <option>4+ Bags</option>
       </select>
     </div>
-
     <div>
       <label>Extras</label>
       <select>
@@ -407,61 +88,41 @@ function toggleMode() {
         <option>Meet & Greet</option>
       </select>
     </div>
-
     <div>
       <label>Notes (optional)</label>
       <textarea rows="3" placeholder="Add any notes..."></textarea>
     </div>
-
   </div>
-
-  <button class="calculate-btn">Calculate Price</button>
+  <button class="btn-wide">Calculate Price</button>
 </div>
 
-<!-- FLEET -->
-<section class="fleet-section">
-  <h2 class="fleet-title">Our Premium Fleet</h2>
-
-  <div class="fleet-grid">
-
+<section class="section">
+  <h2>Our Premium Fleet</h2>
+  <div class="grid-3">
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1617788138017-80e472b72593?auto=format&fit=crop&w=1200&q=80">
-      <div class="card-content">
-        <h3>Business Class</h3>
-        <p>Mercedes‑Benz E‑Class or similar</p>
-        <p>Comfortable, elegant, and perfect for airport transfers.</p>
-      </div>
+      <h3>Business Class</h3>
+      <p>Mercedes‑Benz E‑Class or similar for comfortable airport and city rides.</p>
     </div>
-
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1617788138017-80e472b72593?auto=format&fit=crop&w=1200&q=80">
-      <div class="card-content">
-        <h3>Business Van</h3>
-        <p>Mercedes‑Benz V‑Class</p>
-        <p>Spacious, premium, ideal for groups and families.</p>
-      </div>
+      <h3>Business Van</h3>
+      <p>Mercedes‑Benz V‑Class for families, groups, and extra luggage.</p>
     </div>
-
     <div class="card">
-      <img src="https://images.unsplash.com/photo-1617788138017-80e472b72593?auto=format&fit=crop&w=1200&q=80">
-      <div class="card-content">
-        <h3>First Class</h3>
-        <p>Mercedes‑Benz S‑Class</p>
-        <p>Ultimate luxury for VIP and business travel.</p>
-      </div>
+      <h3>First Class</h3>
+      <p>Mercedes‑Benz S‑Class for VIP and executive travel.</p>
     </div>
-
   </div>
 </section>
 
-<!-- WHY US -->
-<section class="why">
+<section class="section">
   <h2>Why Choose HelvetiaRide?</h2>
-  <p>We provide premium airport transfers and chauffeur services across Switzerland with professional drivers, luxury vehicles, and a seamless booking experience.</p>
+  <p>We combine Swiss reliability with premium chauffeur service, offering on‑time pickups, professional drivers, and luxury vehicles for airport transfers, business travel, and long‑distance rides across Switzerland.</p>
 </section>
 
+</main>
+
 <footer>
-  © 2026 HelvetiaRide. All rights reserved.
+  © 2026 HelvetiaRide — Call/WhatsApp: +41 76 680 38 05 — Email: info@helvetiaride.com
 </footer>
 
 </body>
