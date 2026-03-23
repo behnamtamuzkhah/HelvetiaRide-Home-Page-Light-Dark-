@@ -2,15 +2,11 @@
 // HelvetiaRide – 12 Language System
 // ---------------------------------------------
 
-function setLanguage(lang) {
-  localStorage.setItem("lang", lang);
-  applyLanguage();
-}
-
 function applyLanguage() {
   const lang = localStorage.getItem("lang") || "en";
   const elements = document.querySelectorAll("[data-key]");
 
+  // Apply translations
   elements.forEach(el => {
     const key = el.getAttribute("data-key");
     if (translations[lang] && translations[lang][key]) {
@@ -18,11 +14,19 @@ function applyLanguage() {
     }
   });
 
+  // Update dropdown
   const selector = document.getElementById("langSwitcher");
   if (selector) selector.value = lang;
-}
 
-document.addEventListener("DOMContentLoaded", applyLanguage);
+  // -------------------------
+  // RTL / LTR MODE SWITCHING
+  // -------------------------
+  if (lang === "fa" || lang === "ar") {
+    document.body.classList.add("rtl");
+  } else {
+    document.body.classList.remove("rtl");
+  }
+}
 
 // ---------------------------------------------
 // TRANSLATIONS – 12 LANGUAGES
