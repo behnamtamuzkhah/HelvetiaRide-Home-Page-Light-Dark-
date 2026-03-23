@@ -1,1 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title data-key="contact_title">Contact Us</title>
+<meta name="description" content="Contact HelvetiaRide to book Zurich airport transfers, chauffeur service, or request a custom quote.">
+<link rel="stylesheet" href="style.css">
 
+<script src="languages.js"></script>
+
+<script>
+function toggleMode() {
+  document.body.classList.toggle("light");
+}
+</script>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">HelvetiaRide</div>
+
+  <nav>
+    <a href="index.html" data-key="nav_home">Home</a>
+    <a href="about.html" data-key="nav_about">About</a>
+    <a href="services.html" data-key="nav_services">Services</a>
+    <a href="fleet.html" data-key="nav_fleet">Fleet</a>
+    <a href="pricing.html" data-key="nav_pricing">Pricing</a>
+    <a href="contact.html" data-key="nav_contact">Contact</a>
+
+    <!-- Language Switcher -->
+    <select id="langSwitcher" onchange="setLanguage(this.value)">
+      <option value="en">EN</option>
+      <option value="de">DE</option>
+      <option value="fr">FR</option>
+      <option value="it">IT</option>
+      <option value="es">ES</option>
+      <option value="pt">PT</option>
+      <option value="ru">RU</option>
+      <option value="tr">TR</option>
+      <option value="ar">AR</option>
+      <option value="fa">FA</option>
+      <option value="zh">ZH</option>
+      <option value="ja">JA</option>
+    </select>
+
+    <span class="toggle" onclick="toggleMode()">Light / Dark</span>
+  </nav>
+</header>
+
+<main class="main">
+
+<!-- HERO -->
+<section class="hero hero-inner">
+  <div class="hero-content">
+    <h1 data-key="contact_title">Contact Us</h1>
+    <p data-key="contact_sub">Send us your request and we will get back to you with a tailored offer.</p>
+  </div>
+</section>
+
+<!-- CONTACT FORM -->
+<section class="section">
+  <div class="form-container">
+    <div class="form-grid">
+
+      <div>
+        <label data-key="contact_name_label">Name</label>
+        <input type="text" data-key="contact_name_placeholder" placeholder="Your full name">
+      </div>
+
+      <div>
+        <label data-key="contact_email_label">Email</label>
+        <input type="email" data-key="contact_email_placeholder" placeholder="Your email address">
+      </div>
+
+      <div>
+        <label data-key="contact_phone_label">Phone</label>
+        <input type="tel" data-key="contact_phone_placeholder" placeholder="Your phone number">
+      </div>
+
+      <div>
+        <label data-key="contact_service_label">Service Type</label>
+        <select>
+          <option data-key="contact_service1">Zurich Airport Transfer</option>
+          <option data-key="contact_service2">Point‑to‑Point Ride</option>
+          <option data-key="contact_service3">Hourly Chauffeur</option>
+          <option data-key="contact_service4">Long‑Distance Ride</option>
+          <option data-key="contact_service5">Other</option>
+        </select>
+      </div>
+
+      <div style="grid-column: 1 / -1;">
+        <label data-key="contact_message_label">Message</label>
+        <textarea rows="4" data-key="contact_message_placeholder" placeholder="Tell us about your route, date, time, and any special requests."></textarea>
+      </div>
+
+    </div>
+
+    <button class="btn-wide" data-key="contact_btn">Send Request</button>
+  </div>
+</section>
+
+<!-- BUSINESS DETAILS -->
+<section class="section">
+  <h2 data-key="contact_details_title">Business Details</h2>
+
+  <p>
+    HelvetiaRide – Premium Chauffeur Service<br>
+    Zurich, Switzerland<br><br>
+
+    <strong data-key="contact_call_label">Call/WhatsApp:</strong> +41 76 680 38 05<br>
+    <strong data-key="contact_email_label2">Email:</strong> info@helvetiaride.com
+  </p>
+</section>
+
+</main>
+
+<footer>
+  © 2026 HelvetiaRide —  
+  Call/WhatsApp: +41 76 680 38 05 —  
+  Email: info@helvetiaride.com
+</footer>
+
+</body>
+</html>
