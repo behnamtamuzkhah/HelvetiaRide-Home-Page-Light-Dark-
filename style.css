@@ -405,3 +405,7 @@ body.rtl footer {
   text-align: center;
   direction: rtl;
 }
+body.rtl #langSwitcher {
+  direction: ltr;
+  text-align: left;
+}
