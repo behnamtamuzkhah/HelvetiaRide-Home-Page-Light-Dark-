@@ -3,68 +3,106 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services – HelvetiaRide Chauffeur & Airport Transfers</title>
-<meta name="description" content="Discover HelvetiaRide services: Zurich airport transfers, point‑to‑point rides, hourly chauffeur service, and long‑distance trips across Switzerland.">
+<title data-key="services_title">Our Services</title>
+<meta name="description" content="Premium chauffeur and airport transfer services across Switzerland.">
 <link rel="stylesheet" href="style.css">
+
+<script src="languages.js"></script>
+
 <script>
-function toggleMode() { document.body.classList.toggle("light"); }
+function toggleMode() {
+  document.body.classList.toggle("light");
+}
 </script>
 </head>
+
 <body>
 
 <header>
   <div class="logo">HelvetiaRide</div>
+
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="fleet.html">Fleet</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html" data-key="nav_home">Home</a>
+    <a href="about.html" data-key="nav_about">About</a>
+    <a href="services.html" data-key="nav_services">Services</a>
+    <a href="fleet.html" data-key="nav_fleet">Fleet</a>
+    <a href="pricing.html" data-key="nav_pricing">Pricing</a>
+    <a href="contact.html" data-key="nav_contact">Contact</a>
+
+    <!-- Language Switcher -->
+    <select id="langSwitcher" onchange="setLanguage(this.value)">
+      <option value="en">EN</option>
+      <option value="de">DE</option>
+      <option value="fr">FR</option>
+      <option value="it">IT</option>
+      <option value="es">ES</option>
+      <option value="pt">PT</option>
+      <option value="ru">RU</option>
+      <option value="tr">TR</option>
+      <option value="ar">AR</option>
+      <option value="fa">FA</option>
+      <option value="zh">ZH</option>
+      <option value="ja">JA</option>
+    </select>
+
     <span class="toggle" onclick="toggleMode()">Light / Dark</span>
   </nav>
 </header>
 
 <main class="main">
 
+<!-- HERO -->
 <section class="hero hero-inner">
   <div class="hero-content">
-    <h1>Our Services</h1>
-    <p>Premium chauffeur and airport transfer services tailored to your needs.</p>
+    <h1 data-key="services_title">Our Services</h1>
+    <p data-key="services_sub">Premium chauffeur and airport transfer services tailored to your needs.</p>
   </div>
 </section>
 
+<!-- SERVICES GRID -->
 <section class="section">
   <div class="grid-3">
 
     <div class="card">
-      <h3>Zurich Airport Transfers</h3>
-      <p>Reliable, on‑time pickups and drop‑offs at Zurich Airport with flight monitoring and Meet & Greet on request.</p>
+      <h3 data-key="service1_title">Zurich Airport Transfers</h3>
+      <p data-key="service1_text">
+        Reliable, on‑time pickups and drop‑offs at Zurich Airport with flight monitoring and Meet & Greet on request.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Point‑to‑Point Rides</h3>
-      <p>Comfortable transfers between cities, hotels, offices, and events across Switzerland.</p>
+      <h3 data-key="service2_title">Point‑to‑Point Rides</h3>
+      <p data-key="service2_text">
+        Comfortable transfers between cities, hotels, offices, and events across Switzerland.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Hourly Chauffeur Service</h3>
-      <p>Book a private chauffeur by the hour for meetings, events, or flexible schedules.</p>
+      <h3 data-key="service3_title">Hourly Chauffeur Service</h3>
+      <p data-key="service3_text">
+        Book a private chauffeur by the hour for meetings, events, or flexible schedules.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Business Travel</h3>
-      <p>Discreet and professional transportation for executives, delegations, and corporate clients.</p>
+      <h3 data-key="service4_title">Business Travel</h3>
+      <p data-key="service4_text">
+        Discreet and professional transportation for executives, delegations, and corporate clients.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Long‑Distance Rides</h3>
-      <p>Comfortable long‑distance trips to destinations across Switzerland and neighboring countries.</p>
+      <h3 data-key="service5_title">Long‑Distance Rides</h3>
+      <p data-key="service5_text">
+        Comfortable long‑distance trips to destinations across Switzerland and neighboring countries.
+      </p>
     </div>
 
     <div class="card">
-      <h3>Event & VIP Service</h3>
-      <p>Premium transportation for events, conferences, and VIP guests with coordinated logistics.</p>
+      <h3 data-key="service6_title">Event & VIP Service</h3>
+      <p data-key="service6_text">
+        Premium transportation for events, conferences, and VIP guests with coordinated logistics.
+      </p>
     </div>
 
   </div>
@@ -73,7 +111,9 @@ function toggleMode() { document.body.classList.toggle("light"); }
 </main>
 
 <footer>
-  © 2026 HelvetiaRide — Call/WhatsApp: +41 76 680 38 05 — Email: info@helvetiaride.com
+  © 2026 HelvetiaRide —  
+  Call/WhatsApp: +41 76 680 38 05 —  
+  Email: info@helvetiaride.com
 </footer>
 
 </body>
