@@ -49,6 +49,25 @@
 <html id="htmlTag" lang="en">
 <head>
 <meta charset="UTF-8">
+ <!-- SECURITY HEADERS + CSP (FULL PACKAGE) -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="DENY">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+
+<meta http-equiv="Content-Security-Policy"
+content="
+default-src 'self';
+img-src 'self' https://images.unsplash.com data:;
+script-src 'self';
+style-src 'self' 'unsafe-inline';
+font-src 'self';
+connect-src 'self';
+object-src 'none';
+frame-ancestors 'none';
+base-uri 'self';
+form-action 'self';
+"> 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title data-key="about_title">About HelvetiaRide</title>
 <meta name="description" content="Learn more about HelvetiaRide, our mission, values, and commitment to premium chauffeur and airport transfer services in Switzerland.">
