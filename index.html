@@ -3,54 +3,85 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HelvetiaRide – Zurich Airport Transfers & Chauffeur Service</title>
+<title data-key="hero_title">HelvetiaRide – Zurich Airport Transfers & Chauffeur Service</title>
 <meta name="description" content="Premium Zurich airport transfers and chauffeur service across Switzerland with luxury vehicles and professional drivers.">
 <link rel="stylesheet" href="style.css">
+
+<script src="languages.js"></script>
+
 <script>
 function toggleMode() {
   document.body.classList.toggle("light");
 }
 </script>
 </head>
+
 <body>
 
 <header>
   <div class="logo">HelvetiaRide</div>
+
   <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="services.html">Services</a>
-    <a href="fleet.html">Fleet</a>
-    <a href="pricing.html">Pricing</a>
-    <a href="contact.html">Contact</a>
+    <a href="index.html" data-key="nav_home">Home</a>
+    <a href="about.html" data-key="nav_about">About</a>
+    <a href="services.html" data-key="nav_services">Services</a>
+    <a href="fleet.html" data-key="nav_fleet">Fleet</a>
+    <a href="pricing.html" data-key="nav_pricing">Pricing</a>
+    <a href="contact.html" data-key="nav_contact">Contact</a>
+
+    <!-- Language Switcher -->
+    <select id="langSwitcher" onchange="setLanguage(this.value)">
+      <option value="en">EN</option>
+      <option value="de">DE</option>
+      <option value="fr">FR</option>
+      <option value="it">IT</option>
+      <option value="es">ES</option>
+      <option value="pt">PT</option>
+      <option value="ru">RU</option>
+      <option value="tr">TR</option>
+      <option value="ar">AR</option>
+      <option value="fa">FA</option>
+      <option value="zh">ZH</option>
+      <option value="ja">JA</option>
+    </select>
+
     <span class="toggle" onclick="toggleMode()">Light / Dark</span>
   </nav>
 </header>
 
 <main class="main">
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
-    <h1>Zurich Airport Transfers & Chauffeur Service</h1>
-    <p>Private rides across Switzerland with premium vehicles and professional chauffeurs.</p>
-    <button class="btn-primary" onclick="location.href='pricing.html'">View Pricing</button>
+    <h1 data-key="hero_title">Zurich Airport Transfers & Chauffeur Service</h1>
+    <p data-key="hero_sub">Private rides across Switzerland with premium vehicles and professional chauffeurs.</p>
+
+    <button class="btn-primary" onclick="location.href='pricing.html'" data-key="hero_btn">
+      View Pricing
+    </button>
   </div>
 </section>
 
+<!-- BOOKING FORM -->
 <div class="form-container">
   <div class="form-grid">
+
     <div>
       <label>Pickup Location</label>
       <input type="text" placeholder="Enter pickup address">
     </div>
+
     <div>
       <label>Dropoff Location</label>
       <input type="text" placeholder="Enter dropoff address">
     </div>
+
     <div>
       <label>Date & Time</label>
       <input type="datetime-local">
     </div>
+
     <div>
       <label>Passengers</label>
       <select>
@@ -61,6 +92,7 @@ function toggleMode() {
         <option>5+ Passengers</option>
       </select>
     </div>
+
     <div>
       <label>Class</label>
       <select>
@@ -69,6 +101,7 @@ function toggleMode() {
         <option>First Class</option>
       </select>
     </div>
+
     <div>
       <label>Bags</label>
       <select>
@@ -79,6 +112,7 @@ function toggleMode() {
         <option>4+ Bags</option>
       </select>
     </div>
+
     <div>
       <label>Extras</label>
       <select>
@@ -88,25 +122,32 @@ function toggleMode() {
         <option>Meet & Greet</option>
       </select>
     </div>
+
     <div>
       <label>Notes (optional)</label>
       <textarea rows="3" placeholder="Add any notes..."></textarea>
     </div>
+
   </div>
+
   <button class="btn-wide">Calculate Price</button>
 </div>
 
+<!-- FLEET -->
 <section class="section">
   <h2>Our Premium Fleet</h2>
+
   <div class="grid-3">
     <div class="card">
       <h3>Business Class</h3>
       <p>Mercedes‑Benz E‑Class or similar for comfortable airport and city rides.</p>
     </div>
+
     <div class="card">
       <h3>Business Van</h3>
       <p>Mercedes‑Benz V‑Class for families, groups, and extra luggage.</p>
     </div>
+
     <div class="card">
       <h3>First Class</h3>
       <p>Mercedes‑Benz S‑Class for VIP and executive travel.</p>
@@ -114,6 +155,7 @@ function toggleMode() {
   </div>
 </section>
 
+<!-- WHY US -->
 <section class="section">
   <h2>Why Choose HelvetiaRide?</h2>
   <p>We combine Swiss reliability with premium chauffeur service, offering on‑time pickups, professional drivers, and luxury vehicles for airport transfers, business travel, and long‑distance rides across Switzerland.</p>
@@ -122,7 +164,9 @@ function toggleMode() {
 </main>
 
 <footer>
-  © 2026 HelvetiaRide — Call/WhatsApp: +41 76 680 38 05 — Email: info@helvetiaride.com
+  © 2026 HelvetiaRide —  
+  Call/WhatsApp: +41 76 680 38 05 —  
+  Email: info@helvetiaride.com
 </footer>
 
 </body>
