@@ -409,3 +409,57 @@ body.rtl #langSwitcher {
   direction: ltr;
   text-align: left;
 }
+/* -----------------------------------------
+   LUXURY LANGUAGE SWITCHER
+----------------------------------------- */
+
+.lang-box {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-btn {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.1);
+  transition: 0.2s;
+}
+
+.lang-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.lang-menu {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 6px 0;
+  display: none;
+  z-index: 9999;
+}
+
+.lang-menu.open {
+  display: block;
+}
+
+.lang-menu div {
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.lang-menu div:hover {
+  background: #222;
+}
+
+/* RTL fix */
+body.rtl .lang-menu {
+  right: auto;
+  left: 0;
+}
