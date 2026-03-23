@@ -463,3 +463,171 @@ body.rtl .lang-menu {
   right: auto;
   left: 0;
 }
+/* -----------------------------------------
+   RTL SUPPORT (FA + AR)
+----------------------------------------- */
+
+body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+body.rtl header nav a {
+  margin-left: 0;
+  margin-right: 18px;
+}
+
+body.rtl .hero-content,
+body.rtl .section,
+body.rtl .form-container {
+  text-align: right;
+}
+
+body.rtl input,
+body.rtl select,
+body.rtl textarea {
+  text-align: right;
+}
+
+body.rtl footer {
+  text-align: center;
+  direction: rtl;
+}
+
+/* RTL enhancements */
+body.rtl h1,
+body.rtl h2,
+body.rtl h3,
+body.rtl p,
+body.rtl label {
+  letter-spacing: 0;
+  word-spacing: 2px;
+}
+
+body.rtl .card,
+body.rtl .fleet-card-content {
+  text-align: right;
+}
+
+/* Keep language menu LTR even in RTL */
+body.rtl #langSwitcher,
+body.rtl .lang-menu {
+  direction: ltr;
+  text-align: left;
+}
+
+/* -----------------------------------------
+   LUXURY LANGUAGE SWITCHER
+----------------------------------------- */
+
+.lang-box {
+  position: relative;
+  display: inline-block;
+}
+
+.lang-btn {
+  cursor: pointer;
+  font-size: 20px;
+  padding: 6px 10px;
+  border-radius: 6px;
+  background: rgba(255,255,255,0.1);
+  transition: 0.2s;
+}
+
+.lang-btn:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.lang-menu {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 6px;
+  padding: 6px 0;
+  display: none;
+  z-index: 9999;
+}
+
+.lang-menu.open {
+  display: block;
+}
+
+.lang-menu div {
+  padding: 8px 16px;
+  cursor: pointer;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.lang-menu div:hover {
+  background: #222;
+}
+
+/* RTL fix for menu position */
+body.rtl .lang-menu {
+  right: auto;
+  left: 0;
+}
+
+/* -----------------------------------------
+   MOBILE OPTIMIZATION
+----------------------------------------- */
+
+@media (max-width: 768px) {
+  header nav {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .hero-content h1 {
+    font-size: 26px;
+    line-height: 1.3;
+  }
+
+  .hero-content p {
+    font-size: 16px;
+  }
+
+  .grid-3 {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+}
+
+/* -----------------------------------------
+   FORM & BUTTON ENHANCEMENTS
+----------------------------------------- */
+
+input, select, textarea {
+  font-size: 16px;
+  padding: 10px 12px;
+}
+
+.btn-primary, .btn-wide {
+  font-size: 17px;
+  padding: 14px 20px;
+  border-radius: 8px;
+}
+
+/* -----------------------------------------
+   HEADER IMPROVEMENT FOR LONG LANGUAGES
+----------------------------------------- */
+
+header nav a {
+  white-space: nowrap;
+}
