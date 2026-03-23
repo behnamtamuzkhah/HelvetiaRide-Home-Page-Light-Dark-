@@ -375,3 +375,33 @@ footer {
     font-size: 32px;
   }
 }
+/* -----------------------------------------
+   RTL SUPPORT (FA + AR)
+----------------------------------------- */
+
+body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+body.rtl header nav a {
+  margin-left: 0;
+  margin-right: 18px;
+}
+
+body.rtl .hero-content,
+body.rtl .section,
+body.rtl .form-container {
+  text-align: right;
+}
+
+body.rtl input,
+body.rtl select,
+body.rtl textarea {
+  text-align: right;
+}
+
+body.rtl footer {
+  text-align: center;
+  direction: rtl;
+}
