@@ -30,20 +30,26 @@ function toggleMode() {
     <a href="contact.html" data-key="nav_contact">Contact</a>
 
     <!-- Language Switcher -->
-    <select id="langSwitcher" onchange="setLanguage(this.value)">
-      <option value="en">EN</option>
-      <option value="de">DE</option>
-      <option value="fr">FR</option>
-      <option value="it">IT</option>
-      <option value="es">ES</option>
-      <option value="pt">PT</option>
-      <option value="ru">RU</option>
-      <option value="tr">TR</option>
-      <option value="ar">AR</option>
-      <option value="fa">FA</option>
-      <option value="zh">ZH</option>
-      <option value="ja">JA</option>
-    </select>
+ <div class="lang-box">
+  <div class="lang-btn" onclick="toggleLangMenu()">
+    🌐
+  </div>
+
+  <div class="lang-menu" id="langMenu">
+    <div onclick="setLanguage('en')">EN</div>
+    <div onclick="setLanguage('de')">DE</div>
+    <div onclick="setLanguage('fr')">FR</div>
+    <div onclick="setLanguage('it')">IT</div>
+    <div onclick="setLanguage('es')">ES</div>
+    <div onclick="setLanguage('pt')">PT</div>
+    <div onclick="setLanguage('ru')">RU</div>
+    <div onclick="setLanguage('tr')">TR</div>
+    <div onclick="setLanguage('ar')">AR</div>
+    <div onclick="setLanguage('fa')">FA</div>
+    <div onclick="setLanguage('zh')">ZH</div>
+    <div onclick="setLanguage('ja')">JA</div>
+  </div>
+</div>
 
     <span class="toggle" onclick="toggleMode()">Light / Dark</span>
   </nav>
